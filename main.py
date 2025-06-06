@@ -49,7 +49,7 @@ def train(net,train_iter,test_iter,lr,device,epochs = 400):
     print('training_on',device)
     net.to(device)
     loss = nn.CrossEntropyLoss()
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+    optimizer = torch.optim.SGD(model.parameters(), lr=lr)
 
     train_losses = []
     train_accs = []
